@@ -7,7 +7,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Nurekit', link: '/nurekit' },
-      { text: 'UI', link: '/ui' },
+      { text: 'Nure.NET', link: '/nure-net' },
     ],
 
     sidebar: {
@@ -26,6 +26,24 @@ export default defineConfig({
             { text: 'Auditoriums endpoint', link: '/nurekit/reference/auditoriums-endpoint'},
             { text: 'Groups endpoint', link: '/nurekit/reference/groups-endpoint'},
             { text: 'Teachers endpoint', link: '/nurekit/reference/teachers-endpoint'}
+          ]
+        }
+      ],
+
+      '/nure-net/': [
+        {
+          text: 'Guides',
+          collapsed: false,
+          items: [
+            { text: 'Setting up', link: '/nure-net/guides/setting-up'}
+          ]
+        },
+        {
+          text: 'Classes',
+          collapsed: true,
+          items: [
+            { text: 'Auditorium', link: '/nure-net/classes/auditorium'},
+            { text: 'Group ', link: '/nure-net/classes/group'},
           ]
         }
       ]

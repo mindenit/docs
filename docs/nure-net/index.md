@@ -2,15 +2,15 @@
 layout: home
 
 hero:
-  name: "Nurekit"
-  text: "JavaScript library for cist.nure.ua"
+  name: "Nure.NET"
+  text: ".NET library for cist.nure.ua"
   actions:
     - theme: brand
       text: Get Started
-      link: /nurekit/guides/setting-up
+      link: /nure-net/guides/setting-up
     - theme: alt
       text: View on GitHub
-      link: https://github.com/OneLiL05/nurekit/
+      link: https://github.com/mindenit/Nure.NET
 
 features:
   - title: Feature A
