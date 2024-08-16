@@ -1,7 +1,8 @@
-# Fast start with Nure.NET
+# Setting up
 
-> [!INFO]
-> Used by our [API](https://github.com/mindenit/api)
+:::info
+Used by our [API](https://github.com/mindenit/api)
+:::
 
 .NET library for work with cist.nure.ua. That library allows you to get information about schedule, teachers, groups, and other information from the site cist.nure.ua.
 
@@ -12,19 +13,26 @@
 Below you will find a short guide to using this library.
 
 ---
-### Links:
+
+### Links
+
 [NuGet Page with same guide.](https://www.nuget.org/packages/Nure.NET/)
 
 ---
-### Installation:
+
+### Installation
+
 You can install this library via Nuget Package Manager, or via .NET CLI:
+
 ```bash
 dotnet add package Nure.NET
 ```
 
-### Usage:
+### Usage
+
 Get teachers list:
-```csharp  
+
+```csharp
 using Nure.NET;
 using Nure.NET.Types;
 
@@ -33,7 +41,7 @@ class Program
     static void Main()
     {
         var teachers = Cist.GetTeachers();
-        
+
         foreach (var teacher in teachers)
         {
             Console.WriteLine(teacher.FullName);
@@ -43,6 +51,7 @@ class Program
 ```
 
 Get groups list:
+
 ```csharp
 using Nure.NET;
 using Nure.NET.Types;
@@ -52,7 +61,7 @@ class Program
     static void Main()
     {
         var groups = Cist.GetGroups();
-        
+
         foreach (var group in groups)
         {
             Console.WriteLine(group.Name);
@@ -62,6 +71,7 @@ class Program
 ```
 
 Get auditories list:
+
 ```csharp
 using Nure.NET;
 using Nure.NET.Types;
@@ -71,7 +81,7 @@ class Program
     static void Main()
     {
         var auditories = Cist.GetAuditories();
-        
+
         foreach (var auditory in auditories)
         {
             Console.WriteLine(auditory.Name);
@@ -81,6 +91,7 @@ class Program
 ```
 
 Get schedule for group or other entity:
+
 ```csharp
 using Nure.NET;
 using Nure.NET.Types;
@@ -93,11 +104,11 @@ class Program
             * EventType.Group - for groups
             * EventType.Teacher - for teachers
             * EventType.Auditory - for auditories
-           Default, if you don't specify startTime and endTime, method will return 
+           Default, if you don't specify startTime and endTime, method will return
            all avilable lessons for that group.
         */
         var schedule = Cist.GetEvents(10304333, EventType.Group);
-        
+
         foreach (var lesson in schedule)
         {
             Console.WriteLine(lesson);
@@ -107,6 +118,7 @@ class Program
 ```
 
 Get schedule for group with specified time:
+
 ```csharp
 using Nure.NET;
 using Nure.NET.Types;
